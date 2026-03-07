@@ -23,7 +23,7 @@
       font-size: 2.5rem;
     }
     .accordion {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       border-bottom: 1px solid #eee;
     }
     .question {
@@ -31,9 +31,9 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      padding: 15px 0;
+      padding: 14px 0;
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.1rem; /* Fontu biraz küçülttük */
       color: #000;
       transition: color 0.3s;
     }
@@ -42,7 +42,7 @@
     }
     .question::after {
       content: '+';
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: bold;
       color: #ffd700;
       transition: transform 0.3s;
@@ -57,12 +57,12 @@
       padding: 0 15px;
     }
     .answer.active {
-      max-height: 1000px; /* Yeterince büyük bir değer, içeriğe göre otomatik ayarlanır */
-      padding: 15px;
+      max-height: 1200px; /* İçerik için yeterli */
+      padding: 12px 15px; /* Boşlukları biraz daralttık */
     }
     p {
-      margin: 16px 0;
-      font-size: 1.1rem;
+      margin: 12px 0;
+      font-size: 1.05rem; /* Cevap fontu da hafif küçültüldü */
     }
     strong {
       color: #000;
@@ -84,8 +84,8 @@
     }
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
-      .question { font-size: 1.1rem; }
-      p { font-size: 1rem; }
+      .question { font-size: 1rem; }
+      p { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -114,7 +114,47 @@
     </div>
   </div>
 
-  <!-- Diğer sorular ve cevaplar aynı şekilde devam eder... -->
+  <div class="accordion">
+    <div class="question">4. Can I save my try-on images?</div>
+    <div class="answer">
+      <p>Yes. All images generated through your package can be saved directly to your device, completely watermark-free.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="question">5. Can I share my images with others?</div>
+    <div class="answer">
+      <p>Of course. All images generated through your package you can easily share your images via social media or messaging apps right from your phone.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="question">6. Do I have a free trial?</div>
+    <div class="answer">
+      <p>Absolutely! Every user receives one complimentary try-on image at the start.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="question">7. What happens after the free trial?</div>
+    <div class="answer">
+      <p>After your first free image, you can continue by watching a short ad for each new try-on. Alternatively, you may purchase one of our exclusive packages to enjoy ad-free access and unlock premium styles.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="question">8. Why should I log in to purchase a package?</div>
+    <div class="answer">
+      <p>When you sign in with your Google/Apple account, both your data and all your credits are securely linked to your profile. Even if you uninstall the app, switch devices, or clear your data, your rights remain with you. With just one sign-in, your trials and packages are always safe, ensuring you never lose anything.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="question">9. How long is my package valid?</div>
+    <div class="answer">
+      <p>Once purchased, your package credits remain available for 7 days. Please note that unused credits do not roll over and are non-refundable once expired.</p>
+    </div>
+  </div>
 
   <div class="accordion">
     <div class="question">10. Can I cancel a package after purchase?</div>
@@ -133,7 +173,7 @@
         const accordion = question.parentElement;
         const answer = accordion.querySelector('.answer');
         
-        // Diğer açık akordionları kapat (isteğe bağlı, sadece bir tanesi açık olsun)
+        // Diğer açık akordionları kapat (opsiyonel, sadece bir tane açık olsun)
         document.querySelectorAll('.accordion.active').forEach(item => {
           if (item !== accordion) {
             item.classList.remove('active');
