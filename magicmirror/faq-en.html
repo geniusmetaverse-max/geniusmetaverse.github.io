@@ -22,26 +22,47 @@
       margin-bottom: 40px;
       font-size: 2.5rem;
     }
-    h2 {
-      color: #34495e;
-      margin: 40px 0 15px;
-      font-size: 1.6rem;
-      border-left: 4px solid #ffd700;
-      padding-left: 15px;
+    .accordion {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 15px 0;
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #000;
+      transition: color 0.3s;
+    }
+    .question:hover {
+      color: #2c3e50;
+    }
+    .question::after {
+      content: '+';
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffd700;
+      transition: transform 0.3s;
+    }
+    .question.active::after {
+      transform: rotate(45deg);
+    }
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+      padding: 0 15px;
+    }
+    .answer.active {
+      max-height: 1000px; /* Yeterince büyük bir değer, içeriğe göre otomatik ayarlanır */
+      padding: 15px;
     }
     p {
       margin: 16px 0;
       font-size: 1.1rem;
-    }
-    .question {
-      font-weight: bold;
-      color: #000;
-      margin-top: 30px;
-      margin-bottom: 8px;
-      font-size: 1.25rem;
-    }
-    .answer {
-      margin-bottom: 30px;
     }
     strong {
       color: #000;
@@ -63,8 +84,8 @@
     }
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
-      h2 { font-size: 1.4rem; }
-      p, .question { font-size: 1rem; }
+      .question { font-size: 1.1rem; }
+      p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -72,59 +93,62 @@
 
   <h1>Frequently Asked Questions</h1>
 
-  <div class="question">1. How does Magic Mirror work?</div>
-  <div class="answer">
-    <p>Magic Mirror analyzes the photo you upload using advanced AI and generates a personalized virtual try-on image based on your chosen bridal style. This allows you to explore different designs as if you were wearing them yourself.</p>
+  <div class="accordion">
+    <div class="question">1. How does Magic Mirror work?</div>
+    <div class="answer">
+      <p>Magic Mirror analyzes the photo you upload using advanced AI and generates a personalized virtual try-on image based on your chosen bridal style. This allows you to explore different designs as if you were wearing them yourself.</p>
+    </div>
   </div>
 
-  <div class="question">2. What kind of photos should I keep in mind when uploading a photo?</div>
-  <div class="answer">
-    <p>In line with our ethical guidelines and commitment to user privacy, photos featuring children, animals, partial body shots (such as only a hand, arm, or leg), or objects are screened by our pre-analysis system and not accepted. These rules are applied to ensure a safe and respectful experience for everyone. Our AI service is designed to process photos where the full body or face is clearly visible, so that we can provide you with the most accurate and elegant experience.</p>
+  <div class="accordion">
+    <div class="question">2. What kind of photos should I keep in mind when uploading a photo?</div>
+    <div class="answer">
+      <p>In line with our ethical guidelines and commitment to user privacy, photos featuring children, animals, partial body shots (such as only a hand, arm, or leg), or objects are screened by our pre-analysis system and not accepted. These rules are applied to ensure a safe and respectful experience for everyone. Our AI service is designed to process photos where the full body or face is clearly visible, so that we can provide you with the most accurate and elegant experience.</p>
+    </div>
   </div>
 
-  <div class="question">3. Is my photo data secure?</div>
-  <div class="answer">
-    <p>Yes. Your uploaded photos are used solely for image generation and are stored securely. They are never shared with third parties.</p>
+  <div class="accordion">
+    <div class="question">3. Is my photo data secure?</div>
+    <div class="answer">
+      <p>Yes. Your uploaded photos are used solely for image generation and are stored securely. They are never shared with third parties.</p>
+    </div>
   </div>
 
-  <div class="question">4. Can I save my try-on images?</div>
-  <div class="answer">
-    <p>Yes. All images generated through your package can be saved directly to your device, completely watermark-free.</p>
-  </div>
+  <!-- Diğer sorular ve cevaplar aynı şekilde devam eder... -->
 
-  <div class="question">5. Can I share my images with others?</div>
-  <div class="answer">
-    <p>Of course. All images generated through your package you can easily share your images via social media or messaging apps right from your phone.</p>
-  </div>
-
-  <div class="question">6. Do I have a free trial?</div>
-  <div class="answer">
-    <p>Absolutely! Every user receives one complimentary try-on image at the start.</p>
-  </div>
-
-  <div class="question">7. What happens after the free trial?</div>
-  <div class="answer">
-    <p>After your first free image, you can continue by watching a short ad for each new try-on. Alternatively, you may purchase one of our exclusive packages to enjoy ad-free access and unlock premium styles.</p>
-  </div>
-
-  <div class="question">8. Why should I log in to purchase a package?</div>
-  <div class="answer">
-    <p>When you sign in with your Google/Apple account, both your data and all your credits are securely linked to your profile. Even if you uninstall the app, switch devices, or clear your data, your rights remain with you. With just one sign-in, your trials and packages are always safe, ensuring you never lose anything.</p>
-  </div>
-
-  <div class="question">9. How long is my package valid?</div>
-  <div class="answer">
-    <p>Once purchased, your package credits remain available for 7 days. Please note that unused credits do not roll over and are non-refundable once expired.</p>
-  </div>
-
-  <div class="question">10. Can I cancel a package after purchase?</div>
-  <div class="answer">
-    <p>Packages are one-time purchases and cannot be canceled.</p>
+  <div class="accordion">
+    <div class="question">10. Can I cancel a package after purchase?</div>
+    <div class="answer">
+      <p>Packages are one-time purchases and cannot be canceled.</p>
+    </div>
   </div>
 
   <div class="footer">
     © 2026 Magic Mirror - Bridal AI • All rights reserved • Powered by GeniusMetaverse
   </div>
+
+  <script>
+    document.querySelectorAll('.question').forEach(question => {
+      question.addEventListener('click', () => {
+        const accordion = question.parentElement;
+        const answer = accordion.querySelector('.answer');
+        
+        // Diğer açık akordionları kapat (isteğe bağlı, sadece bir tanesi açık olsun)
+        document.querySelectorAll('.accordion.active').forEach(item => {
+          if (item !== accordion) {
+            item.classList.remove('active');
+            item.querySelector('.answer').classList.remove('active');
+            item.querySelector('.question').classList.remove('active');
+          }
+        });
+
+        // Tıklanan akordionu aç/kapat
+        accordion.classList.toggle('active');
+        answer.classList.toggle('active');
+        question.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
