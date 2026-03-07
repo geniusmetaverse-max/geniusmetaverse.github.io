@@ -22,26 +22,47 @@
       margin-bottom: 40px;
       font-size: 2.5rem;
     }
-    h2 {
-      color: #34495e;
-      margin: 40px 0 15px;
-      font-size: 1.6rem;
-      border-left: 4px solid #ffd700;
-      padding-left: 15px;
-    }
-    p {
-      margin: 16px 0;
-      font-size: 1.1rem;
+    .accordion {
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
     }
     .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 14px 0;
       font-weight: bold;
+      font-size: 1.1rem; /* Font küçültülmüş hali */
       color: #000;
-      margin-top: 30px;
-      margin-bottom: 8px;
-      font-size: 1.25rem;
+      transition: color 0.3s;
+    }
+    .question:hover {
+      color: #2c3e50;
+    }
+    .question::after {
+      content: '+';
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #ffd700;
+      transition: transform 0.3s;
+    }
+    .question.active::after {
+      transform: rotate(45deg);
     }
     .answer {
-      margin-bottom: 30px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+      padding: 0 15px;
+    }
+    .answer.active {
+      max-height: 1200px;
+      padding: 12px 15px;
+    }
+    p {
+      margin: 12px 0;
+      font-size: 1.05rem; /* Cevap fontu hafif küçültülmüş */
     }
     strong {
       color: #000;
@@ -63,8 +84,8 @@
     }
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
-      h2 { font-size: 1.4rem; }
-      p, .question { font-size: 1rem; }
+      .question { font-size: 1rem; }
+      p { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -72,59 +93,102 @@
 
   <h1>Sık Sorulan Sorular</h1>
 
-  <div class="question">1. Magic Mirror nasıl çalışıyor?</div>
-  <div class="answer">
-    <p>Magic Mirror, yüklediğiniz fotoğrafı yapay zekâ ile analiz eder ve seçtiğiniz gelinlik stiline göre size özel bir “virtual try-on” görseli üretir. Böylece farklı tasarımları kendiniz üzerinde görebilirsiniz.</p>
+  <div class="accordion">
+    <div class="question">1. Magic Mirror nasıl çalışıyor?</div>
+    <div class="answer">
+      <p>Magic Mirror, yüklediğiniz fotoğrafı yapay zekâ ile analiz eder ve seçtiğiniz gelinlik stiline göre size özel bir “virtual try-on” görseli üretir. Böylece farklı tasarımları kendiniz üzerinde görebilirsiniz.</p>
+    </div>
   </div>
 
-  <div class="question">2. Fotoğraf yüklerken nelere dikkat etmeliyim?</div>
-  <div class="answer">
-    <p>Etik kurallarımız ve kullanıcı mahremiyetine verdiğimiz önem doğrultusunda; çocuk fotoğrafları, hayvan fotoğrafları, yalnızca vücudun belirli bir bölümünün (örneğin sadece el, kol veya bacak) göründüğü görüntüler ya da eşya/obje fotoğrafları ön analiz sistemimizden geçirilmekte ve kabul edilmemektedir. Bu kurallar, herkes için güvenli ve saygılı bir deneyim sunmak amacıyla uygulanmaktadır. AI hizmetimiz, tüm vücudun veya yüzün net bir şekilde göründüğü fotoğrafları işleyerek size en doğru ve en zarif deneyimi sunmak üzere tasarlanmıştır.</p>
+  <div class="accordion">
+    <div class="question">2. Fotoğraf yüklerken nelere dikkat etmeliyim?</div>
+    <div class="answer">
+      <p>Etik kurallarımız ve kullanıcı mahremiyetine verdiğimiz önem doğrultusunda; çocuk fotoğrafları, hayvan fotoğrafları, yalnızca vücudun belirli bir bölümünün (örneğin sadece el, kol veya bacak) göründüğü görüntüler ya da eşya/obje fotoğrafları ön analiz sistemimizden geçirilmekte ve kabul edilmemektedir. Bu kurallar, herkes için güvenli ve saygılı bir deneyim sunmak amacıyla uygulanmaktadır. AI hizmetimiz, tüm vücudun veya yüzün net bir şekilde göründüğü fotoğrafları işleyerek size en doğru ve en zarif deneyimi sunmak üzere tasarlanmıştır.</p>
+    </div>
   </div>
 
-  <div class="question">3. Fotoğraf verilerim güvende mi?</div>
-  <div class="answer">
-    <p>Kesinlikle. Yüklediğiniz fotoğraflar yalnızca görsel üretim için kullanılır ve güvenli şekilde saklanır. Üçüncü kişilerle paylaşılmaz.</p>
+  <div class="accordion">
+    <div class="question">3. Fotoğraf verilerim güvende mi?</div>
+    <div class="answer">
+      <p>Kesinlikle. Yüklediğiniz fotoğraflar yalnızca görsel üretim için kullanılır ve güvenli şekilde saklanır. Üçüncü kişilerle paylaşılmaz.</p>
+    </div>
   </div>
 
-  <div class="question">4. Görsellerimi kaydedebilir miyim?</div>
-  <div class="answer">
-    <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri Watermark-Free olarak telefonunuza kaydedebilirsiniz.</p>
+  <div class="accordion">
+    <div class="question">4. Görsellerimi kaydedebilir miyim?</div>
+    <div class="answer">
+      <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri Watermark-Free olarak telefonunuza kaydedebilirsiniz.</p>
+    </div>
   </div>
 
-  <div class="question">5. Görselleri başkalarıyla paylaşabilir miyim?</div>
-  <div class="answer">
-    <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri telefonunuzdan sosyal medya veya mesajlaşma uygulamaları aracılığıyla paylaşabilirsiniz.</p>
+  <div class="accordion">
+    <div class="question">5. Görselleri başkalarıyla paylaşabilir miyim?</div>
+    <div class="answer">
+      <p>Evet. Tüm ücretli paket seçenekleri dahilinde ürettiğiniz görselleri telefonunuzdan sosyal medya veya mesajlaşma uygulamaları aracılığıyla paylaşabilirsiniz.</p>
+    </div>
   </div>
 
-  <div class="question">6. Paket satın almak için neden giriş yapmalıyım?</div>
-  <div class="answer">
-    <p>Google/Apple hesabınızla giriş yaptığınızda hem verileriniz hem de sahip olduğunuz tüm krediler güvenli şekilde hesabınıza bağlanır. Uygulamayı silseniz, cihazınızı değiştirseniz veya verileri temizleseniz bile tüm haklarınız sizinle birlikte kalır. Tek bir girişle denemeleriniz ve paketleriniz her zaman güvende olur, hiçbir şey kaybolmaz.</p>
+  <div class="accordion">
+    <div class="question">6. Paket satın almak için neden giriş yapmalıyım?</div>
+    <div class="answer">
+      <p>Google/Apple hesabınızla giriş yaptığınızda hem verileriniz hem de sahip olduğunuz tüm krediler güvenli şekilde hesabınıza bağlanır. Uygulamayı silseniz, cihazınızı değiştirseniz veya verileri temizleseniz bile tüm haklarınız sizinle birlikte kalır. Tek bir girişle denemeleriniz ve paketleriniz her zaman güvende olur, hiçbir şey kaybolmaz.</p>
+    </div>
   </div>
 
-  <div class="question">7. Ücretsiz deneme hakkım var mı?</div>
-  <div class="answer">
-    <p>Evet! Her kullanıcı ilk denemesinde ücretsiz bir görsel oluşturabilir.</p>
+  <div class="accordion">
+    <div class="question">7. Ücretsiz deneme hakkım var mı?</div>
+    <div class="answer">
+      <p>Evet! Her kullanıcı ilk denemesinde ücretsiz bir görsel oluşturabilir.</p>
+    </div>
   </div>
 
-  <div class="question">8. Ücretsizden sonra nasıl devam edebilirim?</div>
-  <div class="answer">
-    <p>İlk denemeden sonra her yeni görsel için bir reklam izleyebilir veya alternatif olarak, size en uygun olduğunu düşündüğünüz paketlerden satın alarak ayrıcalıklı stil ve tarzlara erişim sağlarken reklamsız harika görseller üretmeye devam edebilirsiniz.</p>
+  <div class="accordion">
+    <div class="question">8. Ücretsizden sonra nasıl devam edebilirim?</div>
+    <div class="answer">
+      <p>İlk denemeden sonra her yeni görsel için bir reklam izleyebilir veya alternatif olarak, size en uygun olduğunu düşündüğünüz paketlerden satın alarak ayrıcalıklı stil ve tarzlara erişim sağlarken reklamsız harika görseller üretmeye devam edebilirsiniz.</p>
+    </div>
   </div>
 
-  <div class="question">9. Satın aldığım paketin kullanım süresi nedir?</div>
-  <div class="answer">
-    <p>Satın alma işleminizden sonra 7 gün süresince görsel üretim haklarınızı dilediğiniz gibi kullanabilirsiniz. Süresi dolan ve kullanılmayan krediler ne yazık ki devredilmemekte veya ücret iadesi yapılmamaktadır.</p>
+  <div class="accordion">
+    <div class="question">9. Satın aldığım paketin kullanım süresi nedir?</div>
+    <div class="answer">
+      <p>Satın alma işleminizden sonra 7 gün süresince görsel üretim haklarınızı dilediğiniz gibi kullanabilirsiniz. Süresi dolan ve kullanılmayan krediler ne yazık ki devredilmemekte veya ücret iadesi yapılmamaktadır.</p>
+    </div>
   </div>
 
-  <div class="question">10. Paket satın aldıktan sonra iptal edebilir miyim?</div>
-  <div class="answer">
-    <p>Satın alınan paketler tek seferliktir ve iptal edilemez.</p>
+  <div class="accordion">
+    <div class="question">10. Paket satın aldıktan sonra iptal edebilir miyim?</div>
+    <div class="answer">
+      <p>Satın alınan paketler tek seferliktir ve iptal edilemez.</p>
+    </div>
   </div>
 
   <div class="footer">
-    © 2026 Magic Mirror - Bridal AI • All rights reserved • Powered by GeniusMetaverse
+    © 2026 Magic Mirror - Bridal AI • Tüm hakları saklıdır • Powered by GeniusMetaverse
   </div>
+
+  <script>
+    document.querySelectorAll('.question').forEach(question => {
+      question.addEventListener('click', () => {
+        const accordion = question.parentElement;
+        const answer = accordion.querySelector('.answer');
+        
+        // Diğer açık akordionları kapat (isteğe bağlı)
+        document.querySelectorAll('.accordion.active').forEach(item => {
+          if (item !== accordion) {
+            item.classList.remove('active');
+            item.querySelector('.answer').classList.remove('active');
+            item.querySelector('.question').classList.remove('active');
+          }
+        });
+
+        // Tıklanan akordionu aç/kapat
+        accordion.classList.toggle('active');
+        answer.classList.toggle('active');
+        question.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
