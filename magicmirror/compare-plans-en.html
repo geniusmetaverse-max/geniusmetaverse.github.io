@@ -15,15 +15,13 @@
       background: #fafafa;
     }
     h1 {
-      text-align: center;
       color: #1a1a1a;
       margin-bottom: 8px;
     }
     .subtitle {
-      text-align: center;
       color: #555;
       font-size: 1.1em;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
     table {
       width: 100%;
@@ -39,7 +37,7 @@
       border-bottom: 1px solid #e8e8e8;
       vertical-align: top;
     }
-    th {
+    thead th {
       background: #f0f4ff;
       font-weight: bold;
       color: #1a237e;
@@ -60,11 +58,11 @@
     }
     .upgrade-radiance {
       font-weight: bold;
-      color: #1976d2;          /* mavi - Radiance ekstra */
+      color: #1976d2; /* Radiance extras in blue */
     }
     .upgrade-majesty {
       font-weight: bold;
-      color: #2e7d32;          /* yeşil - Majesty ekstra */
+      color: #2e7d32; /* Majesty extras in green */
     }
     .limited {
       color: #757575;
@@ -81,36 +79,26 @@
       font-size: 1.1em;
       padding: 20px 16px 12px;
     }
-    @media (max-width: 800px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      th, td {
-        text-align: left !important;
-      }
-      th {
-        background: #e3f2fd;
-      }
-      tr {
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-      }
-      .feature-name {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 6px;
-      }
+    .blue {
+      color: #1976d2;
+      font-weight: bold;
+    }
+    .green {
+      color: #2e7d32;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-
-  <h1>Compare Magic Mirror Plans</h1>
-  <p class="subtitle">See exactly what you get with each tier – side by side</p>
-
   <table>
     <thead>
+      <!-- Title row spanning all 4 columns -->
+      <tr>
+        <th colspan="4">
+          <h1 style="text-align:center;">Compare Magic Mirror Plans</h1>
+          <p class="subtitle" style="text-align:center;">See exactly what you get with each tier – side by side</p>
+        </th>
+      </tr>
       <tr>
         <th></th>
         <th>
@@ -189,36 +177,39 @@
         <td><span class="upgrade-majesty">Unlocked</span></td>
       </tr>
 
-      <!-- Available Silhouette & Mood bölümü -->
+      <!-- Available Silhouette & Mood -->
       <tr><td colspan="4" class="section-title">Available Silhouette & Mood</td></tr>
 
       <tr>
         <td class="feature-name">Silhouette</td>
         <td>
-          A-Line, Empire Waist, Mini,<br>Tea-Length, Trumpet
+          Limited:<br>A-Line, Empire Waist, Mini, Tea-Length, Trumpet
         </td>
         <td>
-          <span class="upgrade-radiance">+ Column, Mermaid, Princess</span>
+          Unlocked:<br>A-Line, Empire Waist, Mini, Tea-Length, Trumpet, 
+          <span class="blue">Column, Mermaid, Princess</span>
         </td>
         <td>
-          <span class="upgrade-majesty">All Silhouette Unlocked</span>
+          Unlocked:<br>
+          A-Line, <span class="green">Column, Mermaid, Princess</span>, Empire Waist, Mini, Tea-Length, Trumpet
         </td>
       </tr>
 
       <tr>
         <td class="feature-name">Mood</td>
         <td>
-          Avant-garde, Beach, Classic,<br>Ethereal, Modern, Modest, Vintage
+          Limited:<br>Avant-garde, Beach, Classic, Ethereal, Modern, Modest, Vintage
         </td>
         <td>
-          <span class="upgrade-radiance">+ Bohemian, Glamorous</span>
+          Limited:<br>Avant-garde, Beach, Classic, Ethereal, Modern, Modest, Vintage, 
+          <span class="blue">Bohemian, Glamorous</span>
         </td>
         <td>
-          <span class="upgrade-majesty">+ Quiet Luxury, Romantic, Royal</span>
+          Unlocked:<br>Avant-garde, Beach, Classic, Ethereal, Modern, Modest, Vintage, 
+          <span class="green">Bohemian, Glamorous, Quiet Luxury, Romantic, Royal</span>
         </td>
       </tr>
     </tbody>
   </table>
-
 </body>
 </html>
