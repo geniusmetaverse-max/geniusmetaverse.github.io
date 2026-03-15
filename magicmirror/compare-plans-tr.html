@@ -50,12 +50,6 @@
       z-index: 10;
       box-shadow: 0 3px 6px rgba(0,0,0,0.12);
     }
-    thead {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      background: #f0f4ff;
-    }
     .plan-subtitle {
       font-size: 0.95em;
       color: #555;
@@ -84,9 +78,6 @@
     .silhouette-list, .mood-list {
       font-weight: normal;
     }
-    tr:last-child td {
-      border-bottom: none;
-    }
     .section-title {
       background: #e3f2fd;
       font-weight: bold;
@@ -102,28 +93,6 @@
     .green {
       color: #2e7d32;
       font-weight: bold;
-    }
-    @media (max-width: 800px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      th, td {
-        text-align: left !important;
-      }
-      thead th {
-        position: static;
-        box-shadow: none;
-      }
-      tr {
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-      }
-      .feature-name {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 6px;
-      }
     }
   </style>
 </head>
@@ -217,11 +186,11 @@
           Sınırlı:<br>A Kesim, İmparator, Midi, Mini, Trompet
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, Deniz Kızı, İmparator, Midi, Mini, Prenses, Sütun, Trompet
+          Sınırsız:<br>A Kesim, İmparator, Midi, Mini, Trompet,
+          <span class="blue">Deniz Kızı, Prenses, Sütun</span>
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, İmparator, Midi, Mini, Trompet,
-          <span class="green">Deniz Kızı, Prenses, Sütun</span>
+          Sınırsız:<br>A Kesim, <span class="green">Deniz Kızı, Prenses, Sütun</span>, İmparator, Midi, Mini, Trompet
         </td>
       </tr>
       <tr>
@@ -234,4 +203,9 @@
         </td>
         <td class="mood-list">
           Sınırsız:<br>Avangard, <span class="green">Bohem, İhtişamlı, Kraliyet, Romantik, Sessiz Lüks</span>, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettür
-        </
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
