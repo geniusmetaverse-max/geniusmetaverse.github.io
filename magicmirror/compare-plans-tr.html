@@ -15,15 +15,13 @@
       background: #fafafa;
     }
     h1 {
-      text-align: center;
       color: #1a1a1a;
       margin-bottom: 8px;
     }
     .subtitle {
-      text-align: center;
       color: #555;
       font-size: 1.1em;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
     table {
       width: 100%;
@@ -97,10 +95,15 @@
   </style>
 </head>
 <body>
-  <h1>Magic Mirror Planlarını Karşılaştır</h1>
-  <p class="subtitle">Her pakette tam olarak ne aldığınızı karşılaştırmalı olarak görün</p>
   <table>
     <thead>
+      <!-- Başlık kısmı tüm kolonları kapsıyor -->
+      <tr>
+        <th colspan="4">
+          <h1 style="text-align:center;">Magic Mirror Planlarını Karşılaştır</h1>
+          <p class="subtitle" style="text-align:center;">Her pakette tam olarak ne aldığınızı karşılaştırmalı olarak görün</p>
+        </th>
+      </tr>
       <tr>
         <th></th>
         <th>
@@ -186,14 +189,11 @@
           Sınırlı:<br>A Kesim, İmparator, Midi, Mini, Trompet
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, <span class="blue">Deniz Kızı</span>,
-          İmparator, Midi, Mini, <span class="blue">Prenses, Sütun</span>, 
-          Trompet</span>
+          Sınırsız:<br>A Kesim, İmparator, Midi, Mini, Trompet,
+          <span class="blue">Deniz Kızı, Prenses, Sütun</span>
         </td>
         <td class="silhouette-list">
-          Sınırsız:<br>A Kesim, <span class="green">Deniz Kızı</span>,
-          İmparator, Midi, Mini, <span class="green">Prenses, Sütun</span>, 
-          Trompet</span>
+          Sınırsız:<br>A Kesim, <span class="green">Deniz Kızı, Prenses, Sütun</span>, İmparator, Midi, Mini, Trompet
         </td>
       </tr>
       <tr>
@@ -202,14 +202,11 @@
           Sınırlı:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettür
         </td>
         <td class="mood-list">
-          Sınırlı:<br>Avangard, <span class="blue">Bohem, İhtişamlı</span>,
-          Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettür</span> 
+          Sınırlı:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettür, <span class="blue">Bohem, İhtişamlı</span>
         </td>
         <td class="mood-list">
-          Sınırsız:<br>Avangard, <span class="green">Bohem, İhtişamlı</span>,
-          Klasik, <span class="green">Kraliyet</span>, 
-          Masalsı, Modern, Nostaljik, Plaj, <span class="green"> Romantik, Sessiz Lüks</span>,
-          Tesettür</span>
+          Sınırsız:<br>Avangard, Klasik, Masalsı, Modern, Nostaljik, Plaj, Tesettür, 
+          <span class="green">Bohem, İhtişamlı, Kraliyet, Romantik, Sessiz Lüks</span>
         </td>
       </tr>
     </tbody>
