@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordLegend - Frequently Asked Questions (FAQ)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+        .faq-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+        .faq-answer {
+            padding: 0 25px 25px 25px;
+            display: none;
+            line-height: 1.8;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .plus {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #4f46e5;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .plus {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Frequently Asked Questions (FAQ)</h1>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What is WordLegend?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                WordLegend is a modern word guessing game designed to improve your vocabulary and have fun. You can play with new words every day from 3 to 6 letters with increasing difficulty.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is the app completely free?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes, the core gameplay is completely free. However, Premium subscription is available for users who want to remove ads and unlock extra features.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What does Premium subscription offer?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Premium membership removes all advertisements, gives unlimited hints, unlocks exclusive badges, and provides access to special themes and animations.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is my progress saved on the cloud?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes. When you sign in with Google or Apple, your entire progress (levels, badges, streaks, solved words) is securely saved on Firebase and synced across your devices.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is there a daily word limit?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                No. You can solve as many words as you want. There is also a special “Daily Word” mode available every day.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Are the words only in Turkish?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes. Currently, the word pool consists only of Turkish words. English language support may be added in future updates.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I delete my account?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Go to Settings > Account > "Delete My Account". This action is permanent and will delete all your progress.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                I have a technical issue, what should I do?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Try restarting the app. If the problem continues, you can reach us through Settings > Support or by emailing support@wordlegend.app.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Why are there so many ads?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Ads are shown in the free version to keep the game free. You can completely remove ads by purchasing a Premium subscription.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I contact WordLegend?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                For any questions, suggestions, or feedback, please email us at <strong>support@wordlegend.app</strong>. We will respond as soon as possible.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
