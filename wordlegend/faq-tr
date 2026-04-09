@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordLegend - Sık Sorulan Sorular (SSS)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+        .faq-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+        .faq-answer {
+            padding: 0 25px 25px 25px;
+            display: none;
+            line-height: 1.8;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .plus {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #4f46e5;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .plus {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sık Sorulan Sorular (SSS)</h1>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                WordLegend nedir?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                WordLegend, kelime dağarcığınızı geliştirmek ve eğlenmek için tasarlanmış modern bir kelime tahmin oyunudur. Her gün yeni kelimelerle 3'ten 6 harfe kadar zorluk seviyelerinde oynayabilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Uygulama tamamen ücretsiz mi?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Evet, temel oyun deneyimi tamamen ücretsizdir. Ancak reklamlardan rahatsız olan veya ekstra özellikler (reklam kaldırma, özel rozetler, ipucu sistemi) isteyen kullanıcılar için Premium abonelik seçenekleri mevcuttur.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Premium abonelik ne sağlar?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Premium üyelik ile tüm reklamlar kaldırılır, sınırsız ipucu hakkı elde edilir, özel rozetlere erişim açılır ve bazı premium tema ve animasyonlar kullanıma sunulur.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                İlerlemem bulut üzerinde kaydediliyor mu?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Evet. Google veya Apple hesabınızla giriş yaptığınızda tüm ilerlemeniz (seviye, rozetler, seri, çözülen kelimeler) Firebase üzerinden güvenli bir şekilde saklanır ve farklı cihazlarda senkronize olur.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Günlük kelime oynama sınırı var mı?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Hayır. İstediğiniz kadar kelime çözebilirsiniz. Ancak her gün özel “Günlük Kelime” modu da bulunmaktadır.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Kelimeler sadece Türkçe mi?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Evet. Şu anda sadece Türkçe kelimelerden oluşan bir havuz kullanılmaktadır. İlerleyen sürümlerde İngilizce desteği de eklenebilir.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Hesabımı nasıl silebilirim?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Ayarlar > Hesap > "Hesabımı Sil" seçeneğinden hesabınızı kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz ve tüm ilerlemeniz silinir.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Teknik bir sorun yaşadım, ne yapmalıyım?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Uygulamayı yeniden başlatmayı deneyin. Sorun devam ederse Ayarlar > Destek bölümünden bize ulaşabilir veya support@wordlegend.app adresine e-posta gönderebilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Reklamlar neden çok fazla çıkıyor?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Ücretsiz versiyonda oyunu ücretsiz tutabilmek için reklamlar gösterilmektedir. Reklamlardan tamamen kurtulmak için Premium abonelik satın alabilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                WordLegend ile iletişime nasıl geçebilirim?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Her türlü soru, öneri ve geri bildirim için <strong>support@wordlegend.app</strong> adresine e-posta gönderebilirsiniz. En kısa sürede dönüş yapacağız.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
