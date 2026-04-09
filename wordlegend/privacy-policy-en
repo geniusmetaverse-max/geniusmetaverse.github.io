@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordLegend - Privacy Policy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #1a1a1a;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 15px;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WordLegend Privacy Policy</h1>
+    <p class="last-updated">Last Updated: April 09, 2026</p>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p>WordLegend ("App") is a mobile word game designed to improve your vocabulary and word skills. This Privacy Policy explains how we collect, use, protect, and share your personal information when you use our App.</p>
+        <p>By using the App, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.</p>
+    </section>
+
+    <section>
+        <h2>2. Information We Collect</h2>
+        <h3>Personal Information:</h3>
+        <ul>
+            <li>User ID (UID) from Firebase Authentication</li>
+            <li>Email address (if you choose to sign in with email)</li>
+            <li>Game progress: level, words solved, current streak, best streak, earned badges</li>
+            <li>Played words (to prevent repetition)</li>
+        </ul>
+
+        <h3>Automatically Collected Information:</h3>
+        <ul>
+            <li>Device information (model, operating system version)</li>
+            <li>App usage statistics and analytics</li>
+            <li>Advertisement interaction data (via Google AdMob)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+            <li>To provide and maintain the game functionality</li>
+            <li>To save your progress, levels, streaks, and badges</li>
+            <li>To deliver a personalized gaming experience</li>
+            <li>To improve the App and develop new features</li>
+            <li>To analyze advertisement performance</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Sharing of Your Information</h2>
+        <p>We may share your information with the following third parties:</p>
+        <ul>
+            <li><strong>Firebase (Google)</strong>: Authentication, database, and analytics services</li>
+            <li><strong>Google AdMob</strong>: Advertising and ad performance measurement</li>
+            <li><strong>RevenueCat</strong>: Subscription management and payment processing</li>
+            <li>Legal authorities when required by law</li>
+        </ul>
+        <p>We do not sell or rent your personal data to third parties for marketing purposes.</p>
+    </section>
+
+    <section>
+        <h2>5. Advertisements and Cookies</h2>
+        <p>The free version of the App displays third-party advertisements through Google AdMob. These ads may use cookies and similar technologies. You can remove all advertisements by subscribing to Premium.</p>
+    </section>
+
+    <section>
+        <h2>6. Children's Privacy</h2>
+        <p>The App is not intended for children under 13 years of age. Users under 13 are not allowed to use the App. Users aged 13-18 must have parental or guardian consent.</p>
+    </section>
+
+    <section>
+        <h2>7. Data Security</h2>
+        <p>We take reasonable technical and organizational measures to protect your personal data. However, no security system is completely infallible.</p>
+    </section>
+
+    <section>
+        <h2>8. Your Rights</h2>
+        <p>Under GDPR and applicable data protection laws, you have the following rights:</p>
+        <ul>
+            <li>Access to your personal data</li>
+            <li>Correction or deletion of your data</li>
+            <li>Objection to the processing of your data</li>
+            <li>Portability of your data</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes via in-app notification or email. Your continued use of the App after such changes constitutes your acceptance of the updated Policy.</p>
+    </section>
+
+    <section>
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions, requests, or concerns regarding this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> support@wordlegend.app</p>
+    </section>
+
+    <footer style="text-align:center; margin-top:60px; color:#888; font-size:0.9rem;">
+        <p>WordLegend © 2026 - All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
