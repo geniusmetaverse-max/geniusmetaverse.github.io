@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordLegend - Sık Sorulan Sorular (SSS)</title>
+    <title>WordLegend - Sık Sorulan Sorular </title>
     <style>
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -17,7 +17,13 @@
         h1 {
             text-align: center;
             color: #1a1a1a;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+        }
+        .header-line {
+            width: 100%;
+            height: 3px;
+            background-color: #4f46e5; /* mavi çizgi */
+            margin: 0 auto 40px auto;
         }
         .faq-container {
             background: white;
@@ -67,6 +73,7 @@
 <body>
 
     <h1>Sık Sorulan Sorular (SSS)</h1>
+    <div class="header-line"></div>
 
     <div class="faq-container">
 
@@ -76,7 +83,21 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                WordLegend, kelime dağarcığınızı geliştirmek ve eğlenmek için tasarlanmış modern bir kelime tahmin oyunudur. Her gün yeni kelimelerle 3'ten 6 harfe kadar zorluk seviyelerinde oynayabilirsiniz.
+                WordLegend, kelime dağarcığınızı geliştirmek ve eğlenmek için tasarlanmış modern bir kelime tahmin oyunudur. Her gün yeni kelimelerle 3 harften 6 harfe kadar farklı kelime uzunlukları ve farklı oyun modları ile oynayabilirsiniz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Oyun Modları nedir?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Kelime tahmin etme deneyiminizi daha keyifli hale getirmek için farklı modlar sunulmaktadır:<br><br>
+                <strong>Standart Mod:</strong> Belirli bir süre ve 5 tahmin hakkı ile kelimeyi bul. Seviye ilerle ve coin kazan.<br>
+                <strong>Zor Mod:</strong> Belirli bir süre ve tek tahmin hakkı ile kelimeyi bul. Seviye ilerle ve coin kazan.<br>
+                <strong>Süresiz Mod:</strong> Süre sınırı olmadan 5 tahmin hakkı ile kelimeyi bul. Seviye ve coin ödülü yok.<br>
+                <strong>Sınırsız Mod:</strong> Süre ve tahmin hakkı sınırı olmadan kelimeyi bul. Seviye ve coin ödülü yok.
             </div>
         </div>
 
@@ -86,17 +107,27 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Evet, temel oyun deneyimi tamamen ücretsizdir. Ancak reklamlardan rahatsız olan veya ekstra özellikler (reklam kaldırma, özel rozetler, ipucu sistemi) isteyen kullanıcılar için Premium abonelik seçenekleri mevcuttur.
+                Evet, uygulamayı ücretsiz bir şekilde indirip tüm oyun deneyimini yaşayabilirsiniz. Ancak zorunlu reklamlardan rahatsız olan kullanıcılar için WordLegend Pro ile ömür boyu kullanım ve reklamsız oyun oynama seçeneği mevcuttur.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Premium abonelik ne sağlar?
+                Kelimeler sadece Türkçe mi?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Premium üyelik ile tüm reklamlar kaldırılır, sınırsız ipucu hakkı elde edilir, özel rozetlere erişim açılır ve bazı premium tema ve animasyonlar kullanıma sunulur.
+                Evet. Şu anda yalnızca TDK tarafından yayınlanan Türkçe kelimelerden oluşan bir havuz kullanılmaktadır.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Günlük kelime oynama sınırı var mı?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Hayır. İstediğiniz kadar kelime çözebilirsiniz. Ancak her gün sadece bir kere oynanabilen o güne özel “Günlük Meydan Okuma” modu bulunmaktadır.
             </div>
         </div>
 
@@ -112,41 +143,11 @@
 
         <div class="faq-item">
             <div class="faq-question">
-                Günlük kelime oynama sınırı var mı?
+                Sıralama listeleri neye göre yapılıyor?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Hayır. İstediğiniz kadar kelime çözebilirsiniz. Ancak her gün özel “Günlük Kelime” modu da bulunmaktadır.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                Kelimeler sadece Türkçe mi?
-                <span class="plus">+</span>
-            </div>
-            <div class="faq-answer">
-                Evet. Şu anda sadece Türkçe kelimelerden oluşan bir havuz kullanılmaktadır. İlerleyen sürümlerde İngilizce desteği de eklenebilir.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                Hesabımı nasıl silebilirim?
-                <span class="plus">+</span>
-            </div>
-            <div class="faq-answer">
-                Ayarlar > Hesap > "Hesabımı Sil" seçeneğinden hesabınızı kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz ve tüm ilerlemeniz silinir.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                Teknik bir sorun yaşadım, ne yapmalıyım?
-                <span class="plus">+</span>
-            </div>
-            <div class="faq-answer">
-                Uygulamayı yeniden başlatmayı deneyin. Sorun devam ederse Ayarlar > Destek bölümünden bize ulaşabilir veya support@wordlegend.app adresine e-posta gönderebilirsiniz.
+                İstatistik sayfasındaki sıralamalar; seçtiğiniz kelime uzunluğu veya oyun modu fark etmeksizin, oynadığınız oyun adedi ve doğru tahmin ettiğiniz kelime sayısına göre hesaplanmaktadır.
             </div>
         </div>
 
@@ -156,17 +157,27 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Ücretsiz versiyonda oyunu ücretsiz tutabilmek için reklamlar gösterilmektedir. Reklamlardan tamamen kurtulmak için Premium abonelik satın alabilirsiniz.
+                Ücretsiz versiyonda oyunu ücretsiz tutabilmek için zorunlu reklamlar gösterilmektedir. Reklamsız deneyim için WordLegend Pro satın alabilirsiniz.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                WordLegend ile iletişime nasıl geçebilirim?
+                WordLegend Pro satın almak ne sağlar?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Her türlü soru, öneri ve geri bildirim için <strong>support@wordlegend.app</strong> adresine e-posta gönderebilirsiniz. En kısa sürede dönüş yapacağız.
+                WordLegend Pro paketi ile tüm zorunlu reklamlar kaldırılır. Ayrıca uygulamayı ömür boyu kullanım hakkına sahip olursunuz.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Paket satın aldıktan sonra iptal edebilir miyim?
+                <span class="plus">+</span>
+            </div>
+            <div class="faq-answer">
+                Satın alınan paketler tek seferliktir ve iptal edilemez.
             </div>
         </div>
 
@@ -176,6 +187,16 @@
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
+                const allItems = document.querySelectorAll('.faq-item');
+                
+                // Önce tümünü kapat
+                allItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                
+                // Seçilen item'i aç/kapat
                 item.classList.toggle('active');
             });
         });
