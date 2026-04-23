@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordLegend - Hakkımızda</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            text-align: center;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #6366f1;
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-        }
-        .content {
-            background: white;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-        }
-        h2 {
-            color: #1e2937;
-            margin-top: 40px;
-        }
-        .highlight {
-            color: #4f46e5;
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordLegend - Hakkımızda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #2e026d, #4f46e5);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      position: relative;
+    }
+
+    header img.logo {
+      width: 180px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      color: gold;
+    }
+
+    .underline {
+      width: 120px;
+      height: 4px;
+      background-color: #4f46e5;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .about-section h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Hakkımızda</h1>
-    <p class="subtitle">Kelimelerin Gücünü Keşfet</p>
+  <header>
+    <!-- Logo görselini assets klasöründen çağır -->
+    <img src="assets/logo.png" alt="WordLegend Logo" class="logo">
+    <h1>WordLegend Hakkımızda</h1>
+    <div class="underline"></div>
+  </header>
 
-    <div class="content">
+  <section class="about-section">
+    <h2>Kelime Dünyasında Yeni Bir Efsane</h2>
+    <p>
+      WordLegend, kelime dağarcığınızı geliştirmek ve eğlenceli bir deneyim yaşamanız için tasarlanmış
+      modern bir kelime oyunudur. Farklı oyun modları, dinamik görseller ve ödüllerle her seviyede
+      oyuncuya hitap eder. Amacımız, kelime oyunlarını daha enerjik, daha sosyal ve daha keyifli hale getirmektir.
+    </p>
 
-        <h2>WordLegend Kimdir?</h2>
-        <p><strong>WordLegend</strong>, kelime severler için geliştirilmiş modern ve bağımlılık yaratan bir kelime oyunudur. Amacımız, eğlenceli bir deneyim sunarak insanların kelime dağarcığını geliştirmek, Türkçe’yi daha etkili kullanmalarına katkı sağlamak ve her yaştan oyuncuya keyifli zaman geçirtmektir.</p>
-
-        <h2>Neden WordLegend?</h2>
-        <p>Günümüz mobil oyunlarının çoğunda Türkçe kelime oyunları ya çok basit ya da çok zor kalıyor. Biz bu iki uç arasında mükemmel bir denge kurduk.</p>
-        <p>3’ten 6 harfe kadar uzanan akıllı zorluk sistemi, güzel tasarımı, akıcı arayüzü ve premium kalitesiyle WordLegend, sadece bir oyun değil; aynı zamanda bir <span class="highlight">kelime yolculuğu</span>.</p>
-
-        <h2>Vizyonumuz</h2>
-        <p>Türkiye’de ve dünyada en çok tercih edilen Türkçe kelime oyunu olmak ve insanları kelimelerle yeniden buluşturmak.</p>
-
-        <h2>Değerlerimiz</h2>
-        <ul>
-            <li><strong>Kalite ve Sadelik</strong> — Karmaşık değil, keyifli ve akıcı.</li>
-            <li><strong>Türkçe’ye Saygı</strong> — Dilimize sahip çıkıyoruz.</li>
-            <li><strong>Sürekli Gelişim</strong> — Kullanıcı geri bildirimlerini önemsiyoruz.</li>
-            <li><strong>Adil Oyun</strong> — Herkes eşit şartlarda oynasın istiyoruz.</li>
-        </ul>
-
-        <h2>Biz Kimiz?</h2>
-        <p>WordLegend, kelime oyunlarına tutkulu bir geliştirici ve tasarımcı ekibi tarafından hayata geçirildi. Küçük ama tutkulu bir ekibiz. Amacımız büyük: İnsanları kelimelerle mutlu etmek.</p>
-
-        <h2>İletişime Geçin</h2>
-        <p>Önerileriniz, eleştirileriniz veya iş birlikleri için bize her zaman ulaşabilirsiniz.</p>
-        <p><strong>E-posta:</strong> <a href="mailto:support@wordlegend.app" style="color:#4f46e5;">support@wordlegend.app</a></p>
-
-        <p style="margin-top: 50px; text-align: center; color: #64748b;">
-            ❤️ Kelimelerle daha güzel bir dünya için...
-        </p>
-
+    <div class="gallery">
+      <!-- Assets klasöründeki görseller -->
+      <img src="assets/icon-turkce.png" alt="Türkçe Versiyon">
+      <img src="assets/logo-nsh.png" alt="NSH Logo">
+      <img src="assets/background-stars.png" alt="Yıldızlı Arka Plan">
+      <img src="assets/crown-w.png" alt="Taçlı W">
     </div>
+  </section>
 
-    <footer style="text-align:center; margin-top:60px; color:#888; font-size:0.9rem;">
-        <p>WordLegend © 2026 - Tüm Hakları Saklıdır.</p>
-    </footer>
+  <footer>
+    WordLegend © 2026 - Tüm Hakları Saklıdır.
+  </footer>
 
 </body>
 </html>
