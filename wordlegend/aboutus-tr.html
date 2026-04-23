@@ -8,7 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, sans-serif;
-      background: linear-gradient(135deg, #2e026d, #4f46e5);
+      background: url("worldlegend/WL_Background.png") no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       overflow-x: hidden;
     }
@@ -20,12 +21,12 @@
     }
 
     header img.logo {
-      width: 180px;
+      width: 200px;
       animation: float 4s ease-in-out infinite;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-top: 20px;
       color: gold;
     }
@@ -47,10 +48,10 @@
     .about-section {
       max-width: 900px;
       margin: 60px auto;
-      padding: 20px;
-      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
       animation: fadeIn 1.5s ease;
     }
 
@@ -75,22 +76,23 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 30px;
       margin-top: 40px;
     }
 
     .gallery img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       object-fit: contain;
       border-radius: 12px;
       background: rgba(255,255,255,0.1);
       padding: 10px;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2) rotate(10deg);
+      transform: scale(1.2) rotate(8deg);
+      box-shadow: 0 0 25px rgba(255,215,0,0.8);
     }
 
     footer {
@@ -104,8 +106,8 @@
 <body>
 
   <header>
-    <!-- Logo görselini assets klasöründen çağır -->
-    <img src="assets/logo.png" alt="WordLegend Logo" class="logo">
+    <!-- Logo görseli -->
+    <img src="worldlegend/WL_Logo.png" alt="WordLegend Logo" class="logo">
     <h1>WordLegend Hakkımızda</h1>
     <div class="underline"></div>
   </header>
@@ -120,10 +122,9 @@
 
     <div class="gallery">
       <!-- Assets klasöründeki görseller -->
-      <img src="assets/icon-turkce.png" alt="Türkçe Versiyon">
-      <img src="assets/logo-nsh.png" alt="NSH Logo">
-      <img src="assets/background-stars.png" alt="Yıldızlı Arka Plan">
-      <img src="assets/crown-w.png" alt="Taçlı W">
+      <img src="worldlegend/WL_Launcher.png" alt="WordLegend Launcher">
+      <img src="worldlegend/WL_Logo.png" alt="WordLegend Logo">
+      <img src="worldlegend/WL_Background.png" alt="WordLegend Arka Plan">
     </div>
   </section>
 
