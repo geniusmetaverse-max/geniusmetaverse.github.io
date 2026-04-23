@@ -25,20 +25,6 @@
       animation: float 4s ease-in-out infinite;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-top: 20px;
-      color: gold;
-    }
-
-    .underline {
-      width: 120px;
-      height: 4px;
-      background-color: #4f46e5;
-      margin: 15px auto;
-      border-radius: 2px;
-    }
-
     @keyframes float {
       0% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
@@ -55,12 +41,6 @@
       animation: fadeIn 1.5s ease;
     }
 
-    .about-section h2 {
-      color: #ffd700;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
     .about-section p {
       line-height: 1.8;
       font-size: 1.1rem;
@@ -70,29 +50,6 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .gallery img {
-      width: 140px;
-      height: 140px;
-      object-fit: contain;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.2) rotate(8deg);
-      box-shadow: 0 0 25px rgba(255,215,0,0.8);
     }
 
     footer {
@@ -108,24 +65,14 @@
   <header>
     <!-- Logo görseli -->
     <img src="WL_Logo.png" alt="WordLegend Logo" class="logo">
-    <h1>WordLegend Hakkımızda</h1>
-    <div class="underline"></div>
   </header>
 
   <section class="about-section">
-    <h2>Kelime Dünyasında Yeni Bir Efsane</h2>
     <p>
-      WordLegend, kelime dağarcığınızı geliştirmek ve eğlenceli bir deneyim yaşamanız için tasarlanmış
-      modern bir kelime oyunudur. Farklı oyun modları, dinamik görseller ve ödüllerle her seviyede
-      oyuncuya hitap eder. Amacımız, kelime oyunlarını daha enerjik, daha sosyal ve daha keyifli hale getirmektir.
+      WordLegend, kelime severler için geliştirilmiş modern ve bağımlılık yaratan bir kelime oyunudur. 
+      Farklı oyun modları, dinamik görselleri ve ödüllerle her seviyeden oyuncuya hitap eder. 
+      Türkçe’yi daha etkili kullanmaya katkı sağlayarak keyifli zaman geçirmenize yardımcı olur.
     </p>
-
-    <div class="gallery">
-      <!-- worldlegend klasöründeki görseller -->
-      <img src="WL_Launcher.png" alt="WordLegend Launcher">
-      <img src="WL_Logo.png" alt="WordLegend Logo">
-      <img src="WL_Background.png" alt="WordLegend Arka Plan">
-    </div>
   </section>
 
   <footer>
