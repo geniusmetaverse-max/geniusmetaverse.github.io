@@ -1,87 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordLegend - About Us</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            text-align: center;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #6366f1;
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-        }
-        .content {
-            background: white;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-        }
-        h2 {
-            color: #1e2937;
-            margin-top: 40px;
-        }
-        .highlight {
-            color: #4f46e5;
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordLegend - About Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: url("WL_Background.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      position: relative;
+    }
+
+    header img.logo {
+      width: 200px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>About Us</h1>
-    <p class="subtitle">Discover the Power of Words</p>
+  <header>
+    <!-- Logo image -->
+    <img src="WL_Logo.png" alt="WordLegend Logo" class="logo">
+  </header>
 
-    <div class="content">
+  <section class="about-section">
+    <p>
+      WordLegend is a modern and addictive word game developed for word enthusiasts. 
+      With different game modes, dynamic visuals, and rewards, it appeals to players of all levels and helps you enjoy your time while expanding your vocabulary.
+    </p>
+  </section>
 
-        <h2>Who is WordLegend?</h2>
-        <p><strong>WordLegend</strong> is a modern and addictive word game developed for word enthusiasts. Our goal is to improve people’s vocabulary in a fun way, contribute to the effective use of the Turkish language, and provide enjoyable moments for players of all ages.</p>
-
-        <h2>Why WordLegend?</h2>
-        <p>Most Turkish word games on the market are either too simple or too difficult. We have created the perfect balance between these two extremes.</p>
-        <p>With its smart difficulty system ranging from 3 to 6 letters, elegant design, smooth interface, and premium quality, WordLegend is not just a game — it’s a <span class="highlight">journey through words</span>.</p>
-
-        <h2>Our Vision</h2>
-        <p>To become the most preferred Turkish word game in Turkey and around the world, and to bring people together through the love of words.</p>
-
-        <h2>Our Values</h2>
-        <ul>
-            <li><strong>Quality & Simplicity</strong> — Not complicated, just fun and smooth.</li>
-            <li><strong>Respect for Turkish Language</strong> — We take pride in our language.</li>
-            <li><strong>Continuous Improvement</strong> — We value user feedback.</li>
-            <li><strong>Fair Play</strong> — Everyone should play under equal conditions.</li>
-        </ul>
-
-        <h2>Who Are We?</h2>
-        <p>WordLegend was brought to life by a small but passionate team of developers and designers who are deeply in love with word games. Our goal is big: to make people happy through words.</p>
-
-        <h2>Get in Touch</h2>
-        <p>Feel free to reach out to us with your suggestions, feedback, or collaboration ideas.</p>
-        <p><strong>Email:</strong> <a href="mailto:support@wordlegend.app" style="color:#4f46e5;">support@wordlegend.app</a></p>
-
-        <p style="margin-top: 50px; text-align: center; color: #64748b;">
-            ❤️ For a more beautiful world with words...
-        </p>
-
-    </div>
-
-    <footer style="text-align:center; margin-top:60px; color:#888; font-size:0.9rem;">
-        <p>WordLegend © 2026 - All Rights Reserved.</p>
-    </footer>
+  <footer>
+    WordLegend © 2026 - All Rights Reserved.
+  </footer>
 
 </body>
 </html>
