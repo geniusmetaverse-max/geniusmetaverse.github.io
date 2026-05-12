@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordLegend - Frequently Asked Questions (FAQ)</title>
+    <title>WordLegend - Frequently Asked Questions</title>
     <style>
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -17,7 +17,13 @@
         h1 {
             text-align: center;
             color: #1a1a1a;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+        }
+        .header-line {
+            width: 100%;
+            height: 3px;
+            background-color: #4f46e5;
+            margin: 0 auto 40px auto;
         }
         .faq-container {
             background: white;
@@ -67,6 +73,7 @@
 <body>
 
     <h1>Frequently Asked Questions (FAQ)</h1>
+    <div class="header-line"></div>
 
     <div class="faq-container">
 
@@ -76,7 +83,7 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                WordLegend is a modern word guessing game designed to improve your vocabulary and have fun. You can play with new words every day, ranging from 3 to 6 letters, with different game modes.
+                WordLegend is a modern word guessing game designed to improve your vocabulary and entertain you. Every day you can play with new words ranging from 3 to 6 letters in different word lengths and game modes.
             </div>
         </div>
 
@@ -86,11 +93,11 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                To make the word guessing experience more enjoyable, different modes are offered:<br><br>
-                <strong>Standard Mode:</strong> Find the word within a time limit and 5 guesses. Progress levels and earn coins.<br>
-                <strong>Hard Mode:</strong> Find the word within a time limit and only 1 guess. Progress levels and earn coins.<br>
-                <strong>Timeless Mode:</strong> Find the word with 5 guesses and no time limit. No level or coin rewards.<br>
-                <strong>Unlimited Mode:</strong> Find the word with no time or guess limits. No level or coin rewards.
+                To make your word guessing experience more enjoyable, different game modes are offered:<br><br>
+                <strong>Standard:</strong> Find the word within the given time and 5 guesses based on the chosen word length. Level up and earn points.<br>
+                <strong>Hard:</strong> Find the word within the given time and only 1 guess based on the chosen word length. Level up and earn points.<br>
+                <strong>Timeless:</strong> Find the word with 5 guesses and no time limit. No level or point rewards.<br>
+                <strong>Unlimited:</strong> Find the word with no time or guess limits. No level or point rewards.
             </div>
         </div>
 
@@ -100,37 +107,37 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Yes, you can download and enjoy the full gameplay for free. However, for users who dislike mandatory ads, WordLegend Pro offers lifetime access with an ad-free experience.
+                Yes, you can download the app and enjoy the full game experience for free. However, for users who are bothered by mandatory ads, the WordLegend Pro package offers lifetime usage and ad-free gameplay.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Are the words only in English?
+                Are the words only in Turkish?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                No. If you prefer, you can switch the app language to Turkish in the Settings and continue playing with Turkish words.
+                No. If you wish, you can change the language preference to English in Settings/Language and continue playing with English words.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Is there a daily word limit?
+                Is there a daily word play limit?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                No. You can solve as many words as you want. However, there is a special “Daily Challenge” mode that can only be played once per day.
+                No. You can solve as many words as you like. However, the “Daily Challenge” game can only be played once per day with the special word chosen for that day.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Is my progress saved in the cloud?
+                Is my progress saved?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Yes. When you sign in with Google or Apple, all your progress (levels, badges, streaks, solved words) is securely stored on Firebase and synced across devices.
+                Yes. When you log in with your Google or Apple account, all your progress (levels, badges, streaks, solved words) is securely stored and synchronized across devices.
             </div>
         </div>
 
@@ -140,37 +147,37 @@
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Leaderboards on the Statistics page are calculated based on the number of games played and words correctly guessed, regardless of word length or game mode.
+                The rankings on the statistics page are calculated based on the number of games played and the number of correctly guessed words, regardless of the chosen word length or game mode.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Why are there so many ads?
+                Why are ads shown?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Ads are shown in the free version to keep the game free. For an ad-free experience, you can purchase WordLegend Pro.
+                Ads are shown in the free version to keep the game free. To continue playing without mandatory ads, you can purchase the WordLegend Pro package.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                What does WordLegend Pro offer?
+                What does the WordLegend Pro package provide?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                With WordLegend Pro, all mandatory ads are removed. You also gain lifetime access to the app.
+                With the WordLegend Pro package, all mandatory ads are removed. You also gain lifetime access to the app.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                Can I cancel after purchasing the package?
+                Can purchased packages be canceled?
                 <span class="plus">+</span>
             </div>
             <div class="faq-answer">
-                Purchased packages are one-time and cannot be canceled.
+                No, all packages are one-time purchases and cannot be canceled.
             </div>
         </div>
 
@@ -180,6 +187,14 @@
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
+                const allItems = document.querySelectorAll('.faq-item');
+                
+                allItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                
                 item.classList.toggle('active');
             });
         });
