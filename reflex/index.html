@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RefleX - Index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: url("reflex_onboarding.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      position: relative;
+    }
+
+    header img.logo {
+      width: 200px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .lang-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease;
+      text-align: center;
+    }
+
+    .lang-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 15px;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #ff007b, #6610f2);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255,255,255,0.6);
+    }
+
+    .flag-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo image -->
+    <img src="WL_Logo.png" alt="RefleX Logo" class="logo">
+  </header>
+
+  <section class="lang-section">
+    <a href="https://geniusmetaverse-max.github.io/geniusmetaverse/reflex/aboutus-en.html" class="lang-button">
+      <img src="https://flagcdn.com/w20/gb.png" alt="English" class="flag-icon"> English
+    </a>
+    <a href="https://geniusmetaverse-max.github.io/geniusmetaverse/reflex/aboutus-tr.html" class="lang-button">
+      <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon"> Türkçe
+    </a>
+  </section>
+
+  <footer>
+    RefleX © 2026 - All Rights Reserved.
+  </footer>
+
+</body>
+</html>
